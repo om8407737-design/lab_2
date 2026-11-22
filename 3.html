@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>javascriptbasic1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #59716f;
+            margin: 20px;
+        }
+
+        .main-wrapper {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .box {
+            border: 2px solid #333;
+            padding: 20px;
+            width: 250px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        #sweetsContainer {
+            display: none;
+            background-color: #fff8e7;
+            border-color: #d4a373;
+        }
+
+        button {
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body dir="rtl">
+
+    اضهار التربيع = <button onclick="square()" id="btn">square</button>
+    <br>
+    اضهار التاريخ = <button onclick="showDate()" id="btn2">showDate</button>
+
+    <p id="myBox"> النص الاصلي </p><br>
+    <button onclick="addNewElement()">اضف حاويه نصية</button>
+
+    <div class="main-wrapper">
+        <div class="box">
+            <h3>لوحة التحكم</h3>
+            <button onclick="showMenu()">إظهار قائمة الأصناف</button>
+        </div>
+
+        <div class="box" id="sweetsContainer">
+            <h3>قائمة أصناف الحلويات </h3>
+            <ul>
+                <li>كنافة بالقشطة</li>
+                <li>بقلاوة بالفستق</li>
+                <li>بسبوسة</li>
+                <li>تشيز كيك</li>
+                <li>أم علي</li>
+            </ul>
+            <button onclick="hideMenu()">إخفاء</button>
+        </div>
+    </div>
+
+    <script>
+        function square() {
+            let x = 5;
+            let s = gets(x);
+            var ee = document.getElementById("btn");
+            ee.innerText = s;
+
+            return s; 
+        }
+
+        function gets(y) {
+            return y * y;
+        }
+
+        document.write("<br/>");
+
+        function showMenu() {
+            let menu = document.getElementById("sweetsContainer");
+            menu.style.display = "block";
+            menu.style.background = "red";
+        }
+
+        function hideMenu() {
+            let menu = document.getElementById("sweetsContainer");
+            menu.style.display = "none";
+        }
+
+        function showDate() {
+            date = document.getElementById("btn2");
+            let currentDate = new Date();
+            date.innerText = currentDate.toString();
+        }
+
+        document.write("<br/>");
+
+        function addNewElement() {
+            let box = document.getElementById("myBox");
+            let newP = document.createElement("p");
+            let result = square();
+            newP.textContent = "مربع العدد هو " + result;
+            newP.style.color = "#1a1a1a";
+            newP.style.border = "3px solid #ccc";
+            newP.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
+
+            box.appendChild(newP);
+        }
+
+
+        var student = new Array("Ahmed", "khalid", "Mohammed");
+        for (var k = 0; k < student.length; k++) {
+            document.write(student[k] + "<br/>");
+        }
+
+        var info = [1, "Ahmed", 24, "yemen"];
+        for (let i = 0; i < info.length; i++) {
+            document.write(info[i] + "\t");
+        }
+        document.write("<br/>");
+
+        var names = [];
+        names[0] = "Ahmed";
+        names[1] = "Saleh";
+        names[2] = "Khalid";
+
+        for (i = 0; i < names.length; i++) {
+            document.write(names[i] + "\t");
+        }
+        document.write("<br/>");
+
+        names.pop();
+
+        names.push("Sami", "Hassan");
+        for (i = 0; i < names.length; i++) {
+            document.write(names[i] + "\t");
+        }
+        document.write("<br/>");
+
+        names.shift();
+
+        names.unshift("Abdullah");
+        for (i = 0; i < names.length; i++) {
+            document.write(names[i] + "\t");
+        }
+        document.write("<br/>");
+
+        names.reverse();
+        for (i = 0; i < names.length; i++) {
+            document.write(names[i] + "\t");
+        }
+        document.write("<br/>");
+
+        let arr = [[1, 3, 5, 7], [9, 11, 13, 15], [17, 19, 21, 23]];
+        for (i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                document.write(arr[i][j] + " ");
+            }
+            document.write("<br/>");
+        }
+    </script>
+</body>
+</html>

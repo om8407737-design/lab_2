@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>javascriptbasic1</title>
+</head>
+<body dir="rtl">
+    <a href="3.html">3</a>
+    <br><br>
+
+    <script>
+
+        var x = 10;
+        var x = 20;
+        x = 30; 
+        console.log(x);
+        document.write(x);
+        let y = 10; 
+        console.log(y);
+
+        const z = 200;
+        if (true) {
+            var a = "var يتسرب لخارج الأقواس";
+            let b = "let محمي داخل الأقواس";
+            const c = "const محمي داخل الأقواس";
+            console.log(b);
+        }
+
+        console.log(a); 
+
+        let score = 100;
+        let namee = "أحمد";
+        let q = 20;
+        document.write(".. يتم كتابة النص المراد طباعته هنا");
+        document.write("<h1> كتابة نص يقع عليه تأثير وسم من أوسمة ال html</h1>");
+        document.write("<h1 style='color:red'> css طباعة نص يقع عليه تأثير خصائص ال </h1>");
+
+        var name = "ali";
+        document.write("<br>");
+        document.write("welcome <br>");
+        std_namew = window.prompt("أدخل اسمك من فضلك", "اسمك");
+        alert(" ... أهلا بك في " + std_namew + " في موقعنا");
+        let city = window.prompt("أدخل اسم مدينتك من فضلك ؟ ");
+        let con = window.confirm(" هل تريد حفظ البيانات؟");
+
+        if (con == true) {
+            console.log("true");
+        } else {
+            console.log("false");
+        }
+
+        let numinteger = 25;
+        let numfloat = 2.4;
+        let std_name = "Ahmed";
+        let flag = true;
+        const dept_num = 20;
+
+        std_name = window.prompt("أدخل اسمك من فضلك", "اسمك");
+        document.write("<b> اسمك هو :" + std_name + "</b>");
+    </script>
+</body>
+</html>
